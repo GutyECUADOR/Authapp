@@ -1,0 +1,20 @@
+<div class="row" *ngIf="profile">
+  <div class="col-md">
+    <img [src]="profile.picture" class="img-fluid">
+  </div>
+  <div class="col-md">
+    <div class="col-md-8">
+      <ul class="list-group">
+        <li class="list-group-item"> Nombre: {{  profile.given_name + ' ' + profile.family_name }}</li>
+        <li class="list-group-item"> Nick: {{ profile.nickname }}</li>
+        <li class="list-group-item"> Ultimo Registro: {{ profile.updated_at }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<pre>
+  {{ profile | json }}
+</pre>
